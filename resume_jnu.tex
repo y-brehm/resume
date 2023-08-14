@@ -1,0 +1,299 @@
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\educationSubheading}[5]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+        \begin{minipage}[t]{0.75\textwidth}\small{#5}\end{minipage} & 
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.0mm}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+\newcommand{\name}{Yannik Brehm}
+\newcommand{\birth}{29.08.1993}
+\newcommand{\phone}{172 6741795}
+\newcommand{\emaila}{y\_brehm@proton.me} 
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+\parbox{2.2cm}{%
+\includegraphics[width=2.0cm,height=2.6cm,clip]{./resources/LinkedIn_P1036492_10to13.jpg}
+}
+\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +49 \phone}\\
+  {Birth: \birth} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+  {\raisebox{0.0\height}{\footnotesize }}\\
+  {Software Developer} &  \href{https://github.com/y-brehm}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub Profile}} \\
+  {Düsseldorf, Germany} & \href{https://www.linkedin.com/in/yannik-brehm-453b9527a/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}
+\end{tabularx}
+}
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \educationSubheading
+      {M.Sc. Media Informatics}{Grade: A+}
+      {University of Applied Science, Düsseldorf}{Feb 2019 - Feb 2022}
+      {Thesis: "Implementation and Evaluation of a Deep Learning Based Dereverberation Algorithm for Speech Signals" - honors degree}
+    \educationSubheading
+      {B.Eng. Media Technology}{Grade: B}
+      {University of Applied Science, Düsseldorf}{Sep 2012 - Nov 2017}
+      {Thesis: "Room Acoustics and Digital Room Correction Systems for Recording Studios"}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+
+
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Work Experience}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Backend Software-Developer}{Full-time}
+      {Dear Reality GmbH (Sennheiser Group)}{Dec 2021 - present}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {C++ and C backend development of real-time audio applications}
+    \item {Python development of offline audio applications and data serialisation tools}
+    \item {Audio systems tuning through critical listening and measurements}
+    \item {Processes follow the guidelines of test-driven development, modern C++ and Scrum}
+    \resumeItemListEnd
+    
+    \vspace{-3.0mm}
+    
+    \resumeSubheading
+      {Audio DSP Researcher / QA Engineer}{Work Study}
+      {Dear Reality GmbH (Sennheiser Group)}{Feb 2019 - Nov 2021}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {Research and development of audio DSP algorithms and test automation tools}
+    \item {Engineering for quality assurance}
+    \resumeItemListEnd
+      
+    \vspace{-2.0mm}
+    
+    \resumeSubheading
+      {Research Assistant}{Work Study}
+      {University of Applied Science, Düsseldorf}{Mar 2019 - Dec 2019}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {Acoustic and electrical measurements, electrical engineering, audio DSP research}
+    \resumeItemListEnd
+
+    \vspace{-2.0mm}
+    
+    \resumeSubheading
+      {Acoustic Engineer}{Full-time (Oct 2017 - Oct 2018) / Work Study}
+      {ISRW Klapdor GmbH}{Oct 2016 - Feb 2019}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {Acoustic measurements, acoustic simulations, acoustic consultancy}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+\vspace{-8.5mm}
+
+
+
+%-----------PROJECTS-----------------
+\section{\textbf{Projects}}
+\resumeSubHeadingListStart
+
+    \resumeProject
+      {Dear Reality Exoverb}
+      {Backend Developer}{2022}
+
+      \resumeItemListStart
+        \item {Contributed to the development of a synthetic reverb DAW-plugin}
+        \item {In particular: Development of a C++ backend for realtime audio processing}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+    \resumeProject
+      {Dear Reality dearVR Mix / Monitor}
+      {Audio-DSP Researcher, Audio System Tuning Engineer} 
+      {2021} 
+
+      \resumeItemListStart
+        \item {Contributed to the development of a DAW-plugin for binaural monitoring and mixing
+        \item In particular: Development, measurement and tuning of headphone equalisation filters}
+    \resumeItemListEnd
+
+    \resumeProject
+      {Digital loudspeaker design and construction based on a Grimm LS1} 
+      {Fullstack (University project)} 
+      {2021} 
+
+      \resumeItemListStart
+        \item {Complete design and build of a high-end digital loudspeaker system}
+        \item {Including: Acoustic measurements, acoustic simulations, electrical engineering, \\ DSP filter design, PCB design, CNC milling, woodworking, painting, etc.}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+
+%-----------Technical skills-----------------
+\section{\textbf{Technical Skills and Interests}}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+     \textbf{Languages}{: English(fluent), German (native)  } \\
+     \textbf{Programming Languages}{: C, C++17, Python } \\
+     \textbf{Developer Tools}{: Azure, CMake, Conan, Docker, Eagle, Git, \LaTeX, Pure Data, Vim} \\
+     \textbf{Frameworks}{: FlatBuffers, GoogleBenchmark, GoogleTest, JUCE, NumPy/SciPy, pybind11, PyTorch/TensorFlow} \\
+     \textbf{Audio Software \& Tools}{: Ableton Live, Reaper, REW, RePhase, Nuendo/Cubase, WinISP} \\
+     \textbf{Managment Frameworks}{: Kanban, Scrum} \\
+     \textbf{Areas of Interest}{: Acoustics, audio engineering, coding, critical listening, electrical engineering, music} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+\iffalse
+%-----------Achievements-----------------
+\section{\textbf{Achievements}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{Achievement }
+    {description}
+    {Event dates} 
+    
+\resumePOR{Achievement } 
+    {description}
+    {Event dates} 
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+\setlength{\footskip}{4.08003pt}
+
+\fi
+
+
+%-------------------------------------------
+\end{document}
